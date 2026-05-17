@@ -218,19 +218,18 @@ const styles = {
   },
   telaFundo: {
     position: "relative",
-    width: "100vw",
+    width: "100%",
     minHeight: "100dvh",
     overflow: "hidden",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    position: "relative",
     fontFamily: "'Barlow Condensed', sans-serif",
     padding: "1rem"
   },
   imagemTelaFundo: {
-    width: "100vw",
-    minHeight: "100dvh",
+    width: "100%",
+    minHeight: "100%",
     display: "block",
     opacity: "0.8",
     filter: "brightness(0.3)",
@@ -288,12 +287,14 @@ const styles = {
     marginBottom: "3rem"
   },
   progresso: {
-    width: "100%",
+    position: "relative",
+    width: "90%",
+    maxWidth: "50rem",
+    minWidth: "20rem",
     height: "0.4rem",
     background: "#ffffff0f",
     borderRadius: "0.1rem",
-    overflow: "hidden",
-    marginBottom: "0.75rem"
+    marginBottom: "5rem"
   },
   progressoPreenchimento: {
     height: "100%",
@@ -302,16 +303,8 @@ const styles = {
     transition: "width 1s linear",
     boxShadow: "0 0 8px #ffd68733"
   },
-  progressoTexto: {
-    position: "relative",
-    fontSize: "clamp(1rem, 8vw, 15px)",
-    letterSpacing: "0.2rem",
-    color: "#ffff",
-    textTransform: "uppercase"
-  },
   percentualProgresso: {
     position: "absolute",
-    transform: "translateX(-50%)",
     whiteSpace: "nowrap",
     fontSize: "clamp(1rem, 8vw, 15px)",
     letterSpacing: "0.2rem",
@@ -322,7 +315,6 @@ const styles = {
   marcadorEventoProgresso: {
     position: "absolute",
     top: "-0.4rem",
-    transform: "translateX(-50%)",
     display: "flex",
     flexDirection: "column",
     alignItems: "center"
