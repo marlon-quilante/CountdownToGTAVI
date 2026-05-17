@@ -167,10 +167,7 @@ export default function ContagemParaGTAVI(){
             />
             </a>
 
-            <div style={{
-              ...styles.textoEventoProgresso,
-              marginTop: index % 2 === 0 ? "10px" : "-40px"
-            }}>
+            <div style={styles.textoEventoProgresso}>
               {evento.nome}
             </div>
           </div>          
@@ -202,37 +199,38 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    minWidth: "100px"
+    minWidth: "5rem"
   },
   numTempo: {
     fontFamily: "'Bebas Neue', sans-serif",
-    fontSize: "80px",
+    fontSize: "clamp(2rem, 8vw, 80px)",
     lineHeight: 1,
     width: "100px",
     textAlign: "center",
-    letterSpacing: "-1px"
+    letterSpacing: "-0.01rem"
   },
   textoTempo: {
-    fontSize: "15px",
-    letterSpacing: "4px",
+    fontSize: "clamp(1rem, 8vw, 15px)",
+    letterSpacing: "0.2rem",
     color: "#ffff",
     textTransform: "uppercase",
-    marginTop: "6px"
+    marginTop: "0.1rem"
   },
   telaFundo: {
     position: "relative",
     width: "100vw",
-    height: "100vh",
+    minHeight: "100dvh",
     overflow: "hidden",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     position: "relative",
     fontFamily: "'Barlow Condensed', sans-serif",
+    padding: "1rem"
   },
   imagemTelaFundo: {
     width: "100vw",
-    height: "100vh",
+    minHeight: "100dvh",
     display: "block",
     opacity: "0.8",
     filter: "brightness(0.3)",
@@ -257,10 +255,10 @@ const styles = {
     zIndex: 2,
     display: "flex",
     alignItems: "center",
-    gap: "12px",
-    marginBottom: "1.5rem",
-    fontSize: "15px",
-    letterSpacing: "5px",
+    marginBottom: "3rem",
+    marginTop: "2rem",
+    fontSize: "clamp(1.5rem, 8vw, 15px)",
+    letterSpacing: "0.2rem",
     color: "#ffff",
     textTransform: "uppercase"
   },
@@ -268,13 +266,15 @@ const styles = {
     position: "relative",
     zIndex: 2,
     display: "flex",
-    gap: "12px",
+    flexWrap: "wrap",
+    justifyContent: "center",
+    gap: "0.75rem",
     alignItems: "flex-start",
     marginBottom: "4rem"
   },
   separador: { 
     fontFamily: "'Bebas Neue', sans-serif",
-    fontSize: "60px",
+    fontSize: "clamp(1.5rem, 8vw, 60px)",
     color: "#ffd278",
     lineHeight: 1,
     animation: "blink 1s step-end infinite"
@@ -282,28 +282,30 @@ const styles = {
   barraProgresso: {
     position: "relative",
     zIndex: 2,
-    width: "100%",
-    maxWidth: "1000px",
+    width: "90%",
+    maxWidth: "50rem",
+    minWidth: "20rem",
     marginBottom: "3rem"
   },
   progresso: {
-    height: "5px",
+    width: "100%",
+    height: "0.4rem",
     background: "#ffffff0f",
-    borderRadius: "1px",
+    borderRadius: "0.1rem",
     overflow: "hidden",
-    marginBottom: "6px"
+    marginBottom: "0.75rem"
   },
   progressoPreenchimento: {
     height: "100%",
     background: "linear-gradient(90deg, #ffd687 0%, #df3a93 100%)",
-    borderRadius: "1px",
+    borderRadius: "0.1rem",
     transition: "width 1s linear",
     boxShadow: "0 0 8px #ffd68733"
   },
   progressoTexto: {
     position: "relative",
-    fontSize: "15px",
-    letterSpacing: "3px",
+    fontSize: "clamp(1rem, 8vw, 15px)",
+    letterSpacing: "0.2rem",
     color: "#ffff",
     textTransform: "uppercase"
   },
@@ -311,43 +313,44 @@ const styles = {
     position: "absolute",
     transform: "translateX(-50%)",
     whiteSpace: "nowrap",
-    fontSize: "15px",
-    letterSpacing: "3px",
+    fontSize: "clamp(1rem, 8vw, 15px)",
+    letterSpacing: "0.2rem",
     color: "#ffff",
     textTransform: "uppercase",
-    marginTop: "10px"
+    marginTop: "0.75rem"
   },
   marcadorEventoProgresso: {
     position: "absolute",
-    top: "-8px",
+    top: "-0.4rem",
     transform: "translateX(-50%)",
     display: "flex",
     flexDirection: "column",
     alignItems: "center"
   },
   pontoEventoProgresso: {
-    width: "12px",
-    height: "12px",
+    width: "0.75rem",
+    height: "0.75rem",
     borderRadius: "50%",
     background: "#ffd27b",
-    boxShadow: "0 0 10px #df3a93",
-    border: "2px solid #ffd27b"
+    boxShadow: "0 0 0.75rem #df3a93",
+    border: "0.2rem solid #ffd27b"
   },
   textoEventoProgresso: {
     position: "relative",
-    fontSize: "15px",
-    letterSpacing: "3px",
+    fontSize: "clamp(1rem, 8vw, 15px)",
+    letterSpacing: "0.2rem",
     color: "#ffff",
-    textTransform: "uppercase"
+    textTransform: "uppercase",
+    marginTop: "0.75rem"
   },
   dataLancamento: {
     fontFamily: "'Bebas Neue', sans-serif",
-    fontSize: "60px",
+    fontSize: "clamp(1.5rem, 8vw, 60px)",
     backgroundImage: "radial-gradient(circle at 50% 40vh,#ffd27b 0,#df3a93 60vh,#5c1663 100vh)",
     WebkitBackgroundClip: "text",
     WebkitTextFillColor: "transparent",
     backgroundClip: "text",
     zIndex: 2,
-    marginBottom: "-15px"
+    marginBottom: "-0.75rem"
   }
 }
