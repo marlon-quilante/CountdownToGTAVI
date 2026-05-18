@@ -284,17 +284,16 @@ const styles = {
     width: "90%",
     maxWidth: "50rem",
     minWidth: "20rem",
-    marginBottom: "3rem"
+    marginBottom: "3rem",
   },
   progresso: {
     position: "relative",
-    width: "90%",
     maxWidth: "50rem",
     minWidth: "20rem",
     height: "0.4rem",
     background: "#ffffff0f",
     borderRadius: "0.1rem",
-    marginBottom: "5rem"
+    marginBottom: "2rem",
   },
   progressoPreenchimento: {
     height: "100%",
