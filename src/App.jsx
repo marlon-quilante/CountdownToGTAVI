@@ -79,7 +79,6 @@ export default function ContagemParaGTAVI(){
     const intervalo = setInterval(() => {
       atualizarTempo(ObterTempoRestante());
       Piscar(true);
-      definirTimeout(() => Piscar(false), 150);
     }, 1000);
     return () => clearInterval(intervalo);
   }, []);
