@@ -106,8 +106,8 @@ export default function ContagemParaGTAVI(){
     <div style={styles.logo}>
       <div style={{
         backgroundImage: `url(${gta6logo})`,
-        width: "160px",
-        height: "120px",
+        width: "200px",
+        height: "150px",
         backgroundSize: "cover",
         marginTop: "10px"
       }}
@@ -223,8 +223,7 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    fontFamily: "'Barlow Condensed', sans-serif",
-    padding: "1rem"
+    fontFamily: "'Barlow Condensed', sans-serif"
   },
   imagemTelaFundo: {
     width: "100%",
